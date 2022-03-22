@@ -10,11 +10,18 @@ const Shop = () => {
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
+  const handleAddToCart = (product) => {
+    console.log("clicked", product);
+  };
   return (
     <div className="shop-container">
       <div className="product-container">
         {products.map((product) => (
-          <Product key={product.id} product={product}></Product>
+          <Product
+            key={product.id}
+            product={product}
+            handleAddToCart={handleAddToCart}
+          ></Product>
         ))}
       </div>
       <div className="order-container">
@@ -25,3 +32,5 @@ const Shop = () => {
 };
 
 export default Shop;
+
+/* React এ শুধু উপর থেকে  ডাটা পাঠানো যায় props আকারে তাই cart এ ডাটা পাঠানোর জন্য eventhandler টা  shop component এ রাখতে হবে   */
