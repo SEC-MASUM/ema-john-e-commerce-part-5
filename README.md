@@ -1,3 +1,5 @@
+> D:\Programming\Web_Development\mielston_08_simple_react\mod48_day_078_simple_react_spa_with_simple_e-commerce\ema-john-e-commerce
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
