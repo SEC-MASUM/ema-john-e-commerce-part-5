@@ -1,4 +1,4 @@
-> D:\Programming\Web_Development\mielston_08_simple_react\mod48_day_078_simple_react_spa_with_simple_e-commerce\ema-john-e-commerce
+> D:\Programming\Web_Development\mileston_08_simple_react\mod49_day_079_cart_calculation_save_and_retrieve_cart\ema-john-e-commerce-part-2
 
 # Getting Started with Create React App
 
