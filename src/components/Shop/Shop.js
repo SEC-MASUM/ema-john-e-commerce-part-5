@@ -13,25 +13,40 @@ const Shop = () => {
     fetch("products.json")
       .then((response) => response.json())
       .then((data) => setProducts(data));
-    console.log("Product Loaded");
   }, []);
 
+  // useEffect(() => {
+  //   console.log("Local Storage First Line", products);
+  //   const storedCart = getStoredCart();
+  //   const savedCart = [];
+  //   // console.log(storedCart);
+  //   for (const id in storedCart) {
+  //     const addedProduct = products.find((product) => product.id === id);
+  //     if (addedProduct) {
+  //       const quantity = storedCart[id];
+  //       addedProduct.quantity = quantity;
+  //       savedCart.push(addedProduct);
+  //       console.log(addedProduct);
+  //     }
+  //   }
+  //   setCart(savedCart);
+  //   console.log("Local Storage Finished");
+  // }, [products]);
+
   useEffect(() => {
-    console.log("Local Storage First Line", products);
     const storedCart = getStoredCart();
+    console.log(storedCart);
     const savedCart = [];
-    // console.log(storedCart);
     for (const id in storedCart) {
       const addedProduct = products.find((product) => product.id === id);
+
       if (addedProduct) {
         const quantity = storedCart[id];
         addedProduct.quantity = quantity;
         savedCart.push(addedProduct);
-        console.log(addedProduct);
       }
     }
     setCart(savedCart);
-    console.log("Local Storage Finished");
   }, [products]);
 
   const handleAddToCart = (product) => {
