@@ -1,4 +1,7 @@
+import { faWallet } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import { Link } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import useProducts from "../../hooks/useProducts";
 import { removeFromDb } from "../../utilities/fakedb";
@@ -31,7 +34,11 @@ const Order = () => {
           ))}
         </div>
         <div className="order-container">
-          <Cart cart={cart}></Cart>
+          <Cart cart={cart}>
+            <Link to={`/inventory`}>
+              <button>Proceed Checkout <FontAwesomeIcon icon={faWallet}></FontAwesomeIcon></button>
+            </Link>
+          </Cart>
         </div>
       </div>
     </div>
