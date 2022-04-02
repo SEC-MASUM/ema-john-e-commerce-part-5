@@ -1,7 +1,7 @@
 import { faWallet } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import useCart from "../../hooks/useCart";
 import useProducts from "../../hooks/useProducts";
 import { removeFromDb } from "../../utilities/fakedb";
@@ -12,6 +12,7 @@ const Order = () => {
   const [products, setProducts] = useProducts();
   const [cart, setCart] = useCart(products);
 
+  const navigate = useNavigate();
   // console.log(products.length);
   const handleRemoveProduct = (product) => {
     console.log(product);
@@ -35,9 +36,10 @@ const Order = () => {
         </div>
         <div className="order-container">
           <Cart cart={cart}>
-            <Link to={`/inventory`}>
-              <button>Proceed Checkout <FontAwesomeIcon icon={faWallet}></FontAwesomeIcon></button>
-            </Link>
+            <button onClick={() => navigate("/inventory")}>
+              Proceed Checkout
+              <FontAwesomeIcon icon={faWallet}></FontAwesomeIcon>
+            </button>
           </Cart>
         </div>
       </div>
