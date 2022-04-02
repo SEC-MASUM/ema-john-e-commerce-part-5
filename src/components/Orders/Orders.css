@@ -1,0 +1,5 @@
+.review-order-item-container{
+    display: flex;
+    flex-direction: column;
+    
+}
