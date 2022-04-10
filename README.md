@@ -1,4 +1,6 @@
-> D:\Programming\Web_Development\mileston_08_simple_react\mod49_day_079_cart_calculation_save_and_retrieve_cart\ema-john-e-commerce-part-2
+> D:\Programming\Web_Development\mileston_10_react_authentication\mod59_day_096_private_route_recap_with_ema_john\ema-john-e-commerce-part-4
+
+## Firebase Authentication and Private Route
 
 # Getting Started with Create React App
 
