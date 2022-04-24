@@ -16,6 +16,11 @@
   border: 1px solid orange;
 }
 
+.pagination .selected {
+  background-color: orange;
+  color: white;
+}
+
 .order-container {
   background-color: rgba(255, 153, 0, 0.3);
 }
