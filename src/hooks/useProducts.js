@@ -5,7 +5,8 @@ const useProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("products.json").then((data) => {
+    const url = `http://localhost:5000/product`;
+    axios.get(url).then((data) => {
       setProducts(data.data);
     });
   }, []);
