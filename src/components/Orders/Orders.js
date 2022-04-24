@@ -16,9 +16,9 @@ const Order = () => {
   // console.log(products.length);
   const handleRemoveProduct = (product) => {
     console.log(product);
-    const restProduct = cart.filter((item) => item.id !== product.id);
+    const restProduct = cart.filter((item) => item._id !== product._id);
     setCart(restProduct);
-    removeFromDb(product.id);
+    removeFromDb(product._id);
   };
   return (
     <div>
