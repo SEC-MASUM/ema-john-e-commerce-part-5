@@ -10,7 +10,7 @@ import ReviewOrderItem from "../ReviewOrderItem/ReviewOrderItem";
 
 const Order = () => {
   const [products, setProducts] = useProducts();
-  const [cart, setCart] = useCart(products);
+  const [cart, setCart] = useCart();
 
   const navigate = useNavigate();
   // console.log(products.length);
